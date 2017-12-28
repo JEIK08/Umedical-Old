@@ -1,0 +1,48 @@
+/* You can add global styles to this file, and also import other style files */
+
+.appear, .appear * {
+	opacity: 0;
+	animation-name: animation-appear;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+}
+
+.disappear, .disappear * {
+	opacity: 1;
+	animation-name: animation-disappear;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes animation-appear{
+	from {opacity: 0;}
+	to{opacity: 1;}
+}
+
+@keyframes animation-disappear{
+	from {opacity: 1;}
+	to{opacity: 0;}
+}
+
+.vertical-centered{
+	transform: translateY(50vh) translateY(-50%);
+}
+
+.right-align{
+	text-align: right;
+}
+
+.box{
+	padding: 30px;
+	box-shadow: 10px 10px 10px grey;
+	border-radius: 10px;
+}
+
+.separar{
+	margin-top: 30px;
+}
+
+.box-container{
+	padding-left: 0px;
+	padding-right: 10px;
+}
