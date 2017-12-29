@@ -14,14 +14,15 @@ export class ReceptionComponent implements OnInit {
   	this.option = 0;
   }
 
-  ngOnInit() {
-  	this.animation.deleteEntry('reception');
+  ngOnInit(){
+    this.animation.deleteEntry('reception');
   }
 
   optionSelected(opt: number){
     if(opt == this.option) return;
     if(this.option == 0){
       this.option = opt;
+      setTimeout(() => this.animation.deleteEntry('content'), 100);
       return;
     }
     this.animation.addOutput(this.option.toString());

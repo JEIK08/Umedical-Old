@@ -16,12 +16,12 @@
 
 @keyframes animation-appear{
 	from {opacity: 0;}
-	to{opacity: 1;}
+	to {opacity: 1;}
 }
 
 @keyframes animation-disappear{
 	from {opacity: 1;}
-	to{opacity: 0;}
+	to {opacity: 0;}
 }
 
 .vertical-centered{

@@ -1,0 +1,34 @@
+<form (ngSubmit)="searchPatient()">
+	<div class="form-row">
+		<div class="col-md-6 form-group">
+			<label>Tipo de documento</label>
+			<select class="form-control">
+				<option>Cédula de Ciudadanía</option>
+				<option>Cédula Extranjera</option>
+				<option>Pasaporte</option>
+				<option>Registro Civil</option>
+				<option>Tarjeta de Identidad</option>
+				<option>Adulto sin Identidad</option>
+				<option>Menor de Identidad</option>
+			</select>
+		</div>
+		<div class="col-md-6 form-group">
+			<label>Documento de Identificación</label>
+			<input type="text" class="form-control" name="id" [(ngModel)]="id" (keypress)="idType($event)">
+			<small class="form-text text-danger" *ngIf="error">Ingrese un Número de Documento</small>
+		</div>
+	</div>
+	<div class="form-row">
+		<div class="col-md-4">
+			<button type="submit" class="btn btn-outline-info btn-block">Buscar</button>
+		</div>
+		<div class="col-md-4">
+			<button type="button" class="btn btn-outline-info btn-block" *ngIf="state == 2">Editar</button>
+		</div>
+		<div class="col-md-4">
+			<button type="button" class="btn btn-outline-info btn-block" *ngIf="state == 2">Eliminar</button>
+		</div>
+	</div>
+</form>
+
+<div *ngIf="modalNewPatient"><app-modal [data]="modalNewPatient" (optionSelected)="newPatientOption($event)"></app-modal></div>

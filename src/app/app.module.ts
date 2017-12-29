@@ -13,7 +13,8 @@ import { APP_ROUTING } from './app.routes';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { ReceptionComponent } from './components/reception/reception.component';
-import { NewPatientComponent } from './components/reception/new-patient/new-patient.component';
+import { PatientComponent } from './components/reception/patient/patient.component';
+import { ModalComponent } from './components/reusable/modal/modal.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { NewPatientComponent } from './components/reception/new-patient/new-pati
     AppComponent,
     LoginComponent,
     ReceptionComponent,
-    NewPatientComponent
+    PatientComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,

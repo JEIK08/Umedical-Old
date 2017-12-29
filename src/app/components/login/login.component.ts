@@ -12,7 +12,7 @@ export class LoginComponent implements OnInit{
   constructor(private router: Router, private animation: Animation) {}
 
   ngOnInit(){
-    this.animation.deleteEntry('login');
+  	this.animation.deleteEntry('login');
   }
 
   logIn(){

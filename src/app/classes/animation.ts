@@ -9,4 +9,8 @@ export class Animation {
   	let content = document.getElementById(id);
   	content.addEventListener('animationend', () => content.classList.remove('appear'));
   }
+
+  closeModal(id: string){
+  	document.getElementById(id).getElementsByClassName('jmodal-dialog')[0].classList.add('jmodal-out');
+  }
 }
